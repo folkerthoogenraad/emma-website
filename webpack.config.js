@@ -1,6 +1,8 @@
 const webpack = require('webpack');
 const path = require('path');
 
+const outFolder = "docs";
+
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
@@ -10,7 +12,7 @@ const config = {
   devtool: 'inline-source-map',
 
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, outFolder),
     filename: 'bundle.js'
   },
 
@@ -92,8 +94,8 @@ const config = {
   },
   plugins: [
     new CopyWebpackPlugin([
-      { from: path.resolve(__dirname, 'src', 'html'), to: path.resolve(__dirname, 'dist')},
-      { from: path.resolve(__dirname, 'src', 'assets'), to: path.resolve(__dirname, 'dist', 'assets')},
+      { from: path.resolve(__dirname, 'src', 'html'), to: path.resolve(__dirname, outFolder)},
+      { from: path.resolve(__dirname, 'src', 'assets'), to: path.resolve(__dirname, outFolder, 'assets')},
       ]),
   ]
 };
