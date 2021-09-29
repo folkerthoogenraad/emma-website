@@ -1,0 +1,49 @@
+.page-part-text-with-image{
+   @include page-part-padding;
+   
+   .content{
+      
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      
+      @include media-mobile() {  grid-template-columns: 1fr; }
+
+      gap: $grid-gap;
+
+      .text{
+         display: flex;
+         justify-content: center;
+         align-items: flex-start;
+         flex-direction: column;
+
+         
+         .buttons{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+         
+            .button-primary, .button-secondary, .button-social{
+               &:not(:first-child){
+                  margin-left:$small-gap;
+               }
+            }
+         }
+      }
+
+      .image{
+         overflow:hidden;
+         border-radius: $border-radius;
+         
+         &.round{
+            // padding-top:100%;
+            border-radius: 50%;
+         }
+         img{
+            @include img-cover();
+
+            width:100%;
+            height:100%;
+         }
+      }
+   }
+}

@@ -1,0 +1,86 @@
+.button-primary{
+   font-family: $font-title;
+   text-decoration: none;
+
+   padding: 5px 25px;
+
+   color:$c-white;
+   background-color:$c-primary;
+
+   border:1px solid $c-primary;
+   border-radius: $border-radius;
+
+   @include transition(color, background-color);
+
+   &:hover{
+      color:$c-primary;
+      background-color:$c-white;
+   }
+
+   @include background-primary{
+      color:$c-primary;
+      background-color:$c-white;
+      border-color: $c-white;
+
+      &:hover{
+         color:$c-white;
+         background-color:$c-primary;
+      }
+   }
+}
+.button-secondary{
+   font-family: $font-title;
+   text-decoration: none;
+
+   padding: 5px 25px;
+
+   border:1px solid $c-black;
+   border-radius: $border-radius;
+}
+.button-social{
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   
+   text-decoration: none;
+
+   width:40px;
+   height:40px;
+
+   background:$c-primary;
+   color:$c-white;
+
+   border:1px solid $c-primary;
+   border-radius: $border-radius;
+
+   @include transition(background-color, color);
+
+   &:hover{
+      background:$c-white;
+      color:$c-primary;
+   }
+
+   font-size:20px;
+
+   @include background-primary{
+      background:$c-white;
+      color:$c-primary;
+      border-color:$c-white;
+
+      &:hover{
+         background:$c-primary;
+         color:$c-white;
+      }
+   }
+}
+
+.button-primary, .button-secondary{
+   &.with-icon{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+   }
+   .icon{
+      margin-left:10px;
+   }
+}

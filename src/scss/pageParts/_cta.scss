@@ -1,0 +1,24 @@
+.page-part-cta{
+   @include page-part-padding;
+   .content{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+
+      flex-direction: column;
+
+      text-align: center;
+
+      .buttons{
+         display:flex;
+         justify-content: center;
+         align-items: center;
+      
+         .button-primary, .button-secondary, .button-social{
+            &:not(:first-child){
+               margin-left:$small-gap;
+            }
+         }
+      }
+   }
+}

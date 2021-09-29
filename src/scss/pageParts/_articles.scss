@@ -1,0 +1,28 @@
+.page-part-articles{
+   @include page-part-padding;
+   
+   .content{
+      
+      display:grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      @include media-tablet() {  grid-template-columns: 1fr 1fr; }
+      @include media-mobile() {  grid-template-columns: 1fr; }
+      gap:$grid-gap;
+      
+      article{
+         .image{
+            position: relative;
+
+            width:100%;
+            padding-top:75%;
+
+            margin-bottom:10px;
+
+            img{
+               @include overlay;
+               @include img-cover;
+            }
+         }
+      }
+   }
+}

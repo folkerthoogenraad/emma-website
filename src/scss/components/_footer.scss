@@ -1,0 +1,33 @@
+footer{
+   .info{
+      @include page-part-padding;
+
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      @include media-mobile(){ grid-template-columns: 1fr; }
+      gap:$grid-gap;
+
+      .contact{
+         display:flex;
+         flex-direction: column;
+      }
+      
+      .social-links{
+         display:flex;
+
+         .button-social{
+            &:not(:first-child){
+               margin-left:$small-gap;
+            }
+         }
+      }
+   }
+   .copyright{
+      border-top:1px solid $c-white;
+
+      padding-top:30px;
+      padding-bottom:30px;
+
+      text-align: center;
+   }
+}

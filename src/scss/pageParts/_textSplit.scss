@@ -1,0 +1,22 @@
+.page-part-text-split{
+   @include page-part-padding;
+   
+   .content{
+      display:grid;
+      
+      grid-template-columns: 1fr 1fr;
+      gap:$grid-gap;
+
+      .text{
+         display: flex;
+         justify-content: center;
+         align-items: flex-start;
+         flex-direction: column;
+
+         &.right{
+            align-items:flex-end;
+         }
+      }
+
+   }
+}

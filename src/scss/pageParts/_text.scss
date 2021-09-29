@@ -1,0 +1,8 @@
+.page-part-text{
+   @include page-part-padding;
+   
+   .content{
+      display:flex;
+      flex-direction: column;
+   }
+}

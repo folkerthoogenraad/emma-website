@@ -1,0 +1,22 @@
+.page-part-contact{
+   @include page-part-padding;
+   color:$c-white;
+   background:$c-black;
+   
+   .content{
+      
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      @include media-mobile() {  grid-template-columns: 1fr; }
+      gap: $grid-gap;
+
+      .image{
+         img{
+            @include img-cover();
+
+            width:100%;
+            height:100%;
+         }
+      }
+   }
+}

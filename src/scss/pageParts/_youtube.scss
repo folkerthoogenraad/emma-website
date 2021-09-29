@@ -1,0 +1,60 @@
+.page-part-youtube{
+   @include page-part-padding;
+   
+   .content{
+      
+      .youtube{
+         width:100%;
+         padding-top:56.25%;
+
+         position: relative;
+         z-index:0;
+
+         border-radius: $border-radius;
+         overflow:hidden;
+
+         .thumbnail{
+            @include overlay;
+            z-index:3;
+
+            .background, .overlay, .play{
+               @include overlay;
+            }
+
+            .background{
+               @include img-cover;
+            }
+            .overlay{
+               background-color: rgba($c-black, 0.5);
+            }
+
+            .play{
+               display:flex;
+               justify-content: center;
+               align-items: center;
+
+               .play-button{
+                  display:flex;
+                  justify-content: center;
+                  align-items: center;
+                  
+                  border-radius: $border-radius;
+
+                  cursor:pointer;
+
+                  width:100px;
+                  height:100px;
+
+                  color:$c-white;
+                  background:$c-primary;
+               }
+            }
+         }
+
+         iframe{
+            @include overlay;
+            z-index:2;
+         }
+      }
+   }
+}

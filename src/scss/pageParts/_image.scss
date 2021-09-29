@@ -1,0 +1,15 @@
+.page-part-image{
+   @include page-part-padding;
+   
+   .content{
+      display:flex;
+
+      img{
+         width:100%;
+      }
+   }
+
+   &.full{
+      
+   }
+}

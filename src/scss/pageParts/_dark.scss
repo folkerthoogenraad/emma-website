@@ -1,0 +1,14 @@
+.page-part-dark{
+   
+   .content{
+      height:100px;
+
+      background: $c-black;
+
+      -webkit-mask: url("/assets/img/icons/divider.svg");
+   }
+
+   &.flipped{
+      transform:rotate(180deg);
+   }
+}
